@@ -7,9 +7,30 @@
 </head>
 <body>
   <section class="container">
-    <div class="logo">
-      <img src="assets/images/nyt-logo.svg">
-    </div>
+    <header class="site-header">
+      <div class="logo">
+        <img src="assets/images/nyt-logo.svg" alt="New York Times logo">
+      </div>
+      <div class="search">
+        <p>Choose a section</p>
+        <form action="#" method="get">
+          <select class="sections">
+            <option value="sections" selected="selected">Sections ...</option>
+            <option value="home">Home</option>
+            <option value="arts">Arts</option>
+            <option value="business">Business</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+            <option value="fashion">Fashion</option>
+          </select>
+      </form>
+      </div>
+    </header>
+    <footer class="site-footer">
+      <p>© Copyright 2016 Instanews</p>
+    </footer>
   </section>
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="/build/js/min.main.js"></script>
 </body>
 </html>
