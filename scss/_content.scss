@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'open_sans', serif;
+  font-size: 16px;
+  line-height: 1.25rem;
+  max-height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}

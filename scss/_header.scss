@@ -1,0 +1,31 @@
+.site-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: .9rem;
+  height: 100%;
+  padding: 110px 0 80px;
+  width: 80%;
+}
+
+.logo {
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.search {
+  text-align: center;
+  width: 300px;
+}
+
+select {
+  background-color: #fff;
+  border: none;
+  border-radius: 0px;
+  font-family: 'open_sans';
+  font-size: .9rem;
+  margin-top: 1rem;
+  padding: 5px;
+  width: 200px;
+}
