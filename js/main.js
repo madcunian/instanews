@@ -1,9 +1,7 @@
 $(function () {
 
-  $('.sections').on('change', function(event) {
+  $('.sections').selectric().on('change', function(event) {
     event.preventDefault();
-    
-    $('select').selectric();
 
     var section = this.value;
     var urlNyt = 'https://api.nytimes.com/svc/topstories/v2/' + section + '.json?api-key=7f1dbfd97259499a96059cbfe5221ff3';
@@ -14,7 +12,6 @@ $(function () {
     $('.site-header').addClass('site-header-small');
     $('.nyt-logo').addClass('nyt-logo-small');
     $('.loader').show();
-    $('#sections').hide();
 
     $.ajax({
       method: 'GET',

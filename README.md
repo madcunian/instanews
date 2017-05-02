@@ -25,17 +25,12 @@ This project is a one-page, responsive website that allows a user to filter top 
 - CodePen (http://codepen.io/)
 - Sassmeister (https://www.sassmeister.com/)
 
-### Structure
-- Semantic elements (*It's a better practice to use them. E.g.* `<header>..</header>` *vs* `<div class="header"></div>`)
-- Viewport (`<meta name="viewport"`)
-
 ### Style
 - Eric Meyer Reset (http://meyerweb.com/eric/tools/css/reset/)
 - @font-face
-- Font Awesome (http://fontawesome.io/)
 - Font Squirrel (http://fontsquirrel.com/)
-- Media queries
+- Sass features: nested rules, variables, mixins
 
 ### Interactivity
 - jQuery (http://jquery.com/)
-- jQuery Flickity (http://flickity.metafizzy.co/)
+- jQuery Selectric (http://selectric.js.org/)
