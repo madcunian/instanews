@@ -14,43 +14,66 @@
 .articles {
   display: flex;
   flex-direction: column;
+  
+  @include tablet {
+    flex-flow: row wrap;
+  }
+
+  @include desktop {
+    flex-flow: row wrap;
+  }
 }
 
 .news-list {
-  background-position: center, center;
-  background-size: cover;
   font-size: 0.9rem;
-  height: 30%;
-  // display: flex;
-  // align-items: flex-end;
-  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
   position: relative;
 
-  // @include tablet {
-  //   display: flex;
-  //   flex-direction: row;
-  //   flex: 0 1 33%;
-  //   max-width: 33%;
-  //   height: 100%;
-  // }
-
-  // @include desktop {
-  //   display: flex;
-  //   flex-direction: row;
-  //   flex: 0 1 25%;
-  //   width: 25%;
-  // }
-  
-  img {
-    width: 100%;
-    position: relative;
+  @include tablet {
+    flex: 0 1 33.33%;
+    &:hover {
+      .articles-text {
+        bottom: 0;
+        transition: all .5s ease;
+      }
+    }
   }
 
-  p {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
+  @include desktop {
+    flex: 0 1 25%;
+  }
+  
+  div {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+
+    @include tablet {
+      height: 100%;
+    }
+    
+    @include desktop {
+      height: 100%;
+    }
+
+    a {
+    color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .articles-text {
     background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    transition: all 1s ease;
+
+    @include tablet {
+      bottom: -200px;
+    }
   }
 }

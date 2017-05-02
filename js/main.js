@@ -9,7 +9,10 @@ $(function () {
     var newsDisplayed = "";
     var selection = $('.section').val();
     $('.articles').empty();
+    $('.site-header').addClass('site-header-small');
+    $('.nyt-logo').addClass('nyt-logo-small');
     $('.loader').show();
+    $('#sections').hide();
 
     $.ajax({
       method: 'GET',
@@ -22,12 +25,19 @@ $(function () {
       }).slice(0,12)
       $.each(imagesTrue, function(index, value) {
         newsDisplayed += '<li class="news-list">',
-        newsDisplayed += '<img src="' + value.multimedia[4].url + '">',
-        newsDisplayed += '<p>' + value.abstract + '</p>',
+        newsDisplayed += '<div style="background-image: url(\'' + value.multimedia[4].url + '\')">',
+        newsDisplayed += '<a href ="' + value.url + '" target="_blank">',
+        newsDisplayed += '<p class="articles-text">' + value.abstract + '</p>',
+        newsDisplayed += '</a>',
         newsDisplayed += '</li>';
         // console.log(newsDisplayed);
       });
         $('.articles').append(newsDisplayed);
+        
+        // $('.articles-text').hide();
+        // $('.articles').hover(function() {
+        //   $('.articles-text').slideToggle(700, function() {});
+        // })
 
     }).always(function() {
       $('.loader').hide();

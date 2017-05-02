@@ -3,6 +3,11 @@
   font-size: 0.7rem;
   margin: 30px auto 30px;
   text-align: center;
+
+  @include desktop {
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
 }
 
 .all-caps {
