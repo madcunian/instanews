@@ -20,7 +20,8 @@ li {
 }
 
 .container {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  min-width: 320px;
 }

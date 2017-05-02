@@ -69,8 +69,8 @@
     bottom: 0;
     padding: 10px;
     position: absolute;
-    width: 100%;
     transition: all 1s ease;
+    width: 100%;
 
     @include tablet {
       bottom: -200px;

@@ -2,37 +2,43 @@
 <html>
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="build/css/selectric.css">
   <link rel="stylesheet" href="build/css/style.min.css">
   <title>Instanews</title>
 </head>
+
 <body>
   <header class="site-header container">
     <div class="logo">
       <img class="nyt-logo" src="assets/images/nyt-logo.svg" alt="New York Times logo">
     </div>
+
     <div class="search">
       <p>Choose a section:</p>
-      <form class="search-form">
-        <select name="sections" class="sections">
-          <option value="" selected="selected" id="sections">Sections ...</option>
-          <option value="home">Home</option>
-          <option value="arts">Arts</option>
-          <option value="business">Business</option>
-          <option value="sports">Sports</option>
-          <option value="technology">Technology</option>
-          <option value="fashion">Fashion</option>
-        </select>
-      </form>
+      <select name="sections" class="sections">
+        <option value="" selected="selected" id="sections">Sections ...</option>
+        <option value="home">Home</option>
+        <option value="arts">Arts</option>
+        <option value="business">Business</option>
+        <option value="sports">Sports</option>
+        <option value="technology">Technology</option>
+        <option value="fashion">Fashion</option>
+      </select>
     </div>
   </header>
+
   <div class="loader">
     <img src="assets/images/ajax-loader.gif" alt="Loading">
   </div>
+
   <section class="articles"></section>
+
   <footer class="site-footer container">
     <p>© Copyright 2016 <span class="all-caps">Instanews</span></p>
   </footer>
+
   <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/jquery.selectric.min.js"></script>
   <script src="/build/js/main.min.js"></script>
 </body>
 </html>

@@ -3,6 +3,8 @@ $(function () {
   $('.sections').on('change', function(event) {
     event.preventDefault();
     
+    $('select').selectric();
+
     var section = this.value;
 
     var urlNyt = "https://api.nytimes.com/svc/topstories/v2/" + section + ".json?api-key=7f1dbfd97259499a96059cbfe5221ff3";
@@ -30,17 +32,16 @@ $(function () {
         newsDisplayed += '<p class="articles-text">' + value.abstract + '</p>',
         newsDisplayed += '</a>',
         newsDisplayed += '</li>';
-        // console.log(newsDisplayed);
+
       });
         $('.articles').append(newsDisplayed);
-        
-        // $('.articles-text').hide();
-        // $('.articles').hover(function() {
-        //   $('.articles-text').slideToggle(700, function() {});
-        // })
 
-    }).always(function() {
-      $('.loader').hide();
+      }).fail(function() {
+        $('.articles').append('<p>Sorry, a problem occured. Please try again.</p>');
+
+      }).always(function() {
+        $('.loader').hide();
+      
     });
     
   });

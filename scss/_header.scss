@@ -4,8 +4,8 @@
   flex-direction: column;
   font-size: .9rem;
   height: 90%;
-  width: 100%;
   transition: all 1s ease;
+  width: 100%;
 
   @include tablet {
     flex-direction: row;
@@ -31,36 +31,45 @@
   height: auto;
   max-width: 100%;
 
-  .logo-nyt {
-    transition: all 5s ease;
-  }
-
-.nyt-logo-small {
-  height: 150px;
-    @include tablet {
-      height: 90px;
+  .nyt-logo-small {
+    height: 150px;
+      @include tablet {
+        height: 90px;
     }
   }
 }
 
 .search {
   text-align: center;
-  // width: 300px;
 
   @include tablet {
-    text-align: left;
     margin-left: 10px;
+    text-align: left;
   }
   
 }
 
-select {
-  background-color: #fff;
-  border: none;
+// select {
+//   background-color: #fff;
+//   border: none;
+//   border-radius: 0;
+//   font-family: 'open_sans';
+//   font-size: .9rem;
+//   margin-top: 1rem;
+//   padding: 5px;
+//   width: 200px;
+// }
+
+.selectric {
   border-radius: 0;
-  font-family: 'open_sans';
-  font-size: .9rem;
   margin-top: 1rem;
-  padding: 5px;
-  width: 200px;
+  width: 150px;
+  .label {
+    text-align: left;
+  }
+}
+
+.selectric-items {
+  text-align: left;
+  border: none;
 }
