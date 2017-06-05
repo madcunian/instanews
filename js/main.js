@@ -7,7 +7,6 @@ $(function () {
     var urlNyt = 'https://api.nytimes.com/svc/topstories/v2/' + section + '.json?api-key=7f1dbfd97259499a96059cbfe5221ff3';
     var newsDisplayed = '';
     
-    $('.section').val();
     $('.articles').empty();
     $('.site-header').addClass('site-header-small');
     $('.nyt-logo').addClass('nyt-logo-small');
