@@ -37,6 +37,7 @@ $(function () {
 
       }).always(function() {
         $('.loader').hide();
+        $('.select-sections').hide();
       
     });
     
